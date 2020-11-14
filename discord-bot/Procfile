@@ -1,1 +1,1 @@
-discordbot-himecalc01: python main.py
+bot: python main.py
