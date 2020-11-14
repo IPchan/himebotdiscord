@@ -3,15 +3,18 @@ import traceback
 import discord
 from discord.ext import commands
 from modules.grouping import MakeTeam
+from dotenv import load_dotenv
 
+dotenv_path = join(dirname(__file__),'.env')
+load_dotenv(dotenv_path)
 #CONSUMER_KEY = os.environ["CONSUMER_KEY"]
 #CONSUMER_SECRET = os.environ["CONSUMER_SECRET"]
 #ACCESS_TOKEN = os.environ["ACCESS_TOKEN"]
 #ACCESS_TOKEN_SECRET = os.environ["ACCESS_TOKEN_SECRET"]
 
 
-TOKEN = os.environ["DISCORD_BOT_TOKEN"] = 'Nzc0OTMyODI5NzM3ODQ0NzY3.X6e-cA.rxDVbIwGmRJdZXASAE4T4PT7Grk'
-bot = commands.Bot(command_prefix='H?')
+TOKEN = os.environ.get["DISCORD_BOT_TOKEN"]
+bot = commands.Bot(command_prefix='hi?')
 
 "起動処理"
 @bot.event
